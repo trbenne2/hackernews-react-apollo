@@ -66,3 +66,31 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### apollo-boost
+
+Offer some convenience by bundling several packages you need when working with apollo client
+
+### Apollo Client
+
+All the magic happens
+
+### apollo-cache-inmemory
+
+recommended cache
+
+### apollo-link-http
+
+An Apollo Link for remote data fetching
+
+### apollo-link-error
+
+Apollo link for error handling
+
+### apollo-link-state
+
+Link for local state management
+
+### graphql-tag
+
+Exports the gql functiosn for your queries & mutations
