@@ -4,30 +4,28 @@ import './styles/index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
+// 1
 import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { createHttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
-// http link to connect apolloclient instance with graphql api
+// 2
 const httpLink = createHttpLink({
   uri: 'http://localhost:4000',
 });
 
-// instantiate apolloclient passing link and new instance of InMemoryCache
+// 3
 const client = new ApolloClient({
   link: httpLink,
   cache: new InMemoryCache(),
 });
 
+// 4
 ReactDOM.render(
-  <ApolloClient client={client}>
+  <ApolloProvider client={client}>
     <App />
-  </ApolloClient>,
+  </ApolloProvider>,
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
